@@ -4,8 +4,6 @@
   }
 </style>
 
-# Ali Hasnain
-
 <table style="width:100%;border:0;" border="0">
   <tr>
     <!-- Left column: Bio -->
