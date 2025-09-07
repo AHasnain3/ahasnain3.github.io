@@ -9,7 +9,10 @@
     <!-- Left column: Bio -->
     <td style="vertical-align:middle;border:0;">
       <p>
-        I’m a junior at <strong>Georgia Tech (’27)</strong> 🐝 working on projects at the intersection of AI, robotics, and human-computer interaction.  
+        I’m a junior at <strong>Georgia Tech (’27)</strong>
+        <img src="/gt-mark.svg" alt="Georgia Tech logo"
+             style="height:1em;width:auto;vertical-align:-0.2em;margin-left:4px;">
+        working on projects at the intersection of AI, robotics, and human-computer interaction.  
         My interests include autonomous systems, decision-making, computer vision + SLAM and perception, and building software that makes an impact.
         I'm also a founder of a <a href="https://hamsa.ngo" target="_blank" rel="noopener noreferrer">nonprofit</a>.
       </p>
