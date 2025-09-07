@@ -1,18 +1,21 @@
-<!-- Fallback (shown if JS is disabled or fails) -->
+<!-- Fallback if JS is disabled -->
 <link rel="icon" href="/favicon.ico" sizes="any">
 
 <!-- Dynamic pixel-art favicon: Tech Gold background, white A → L → I, slide-down transition -->
 <script>
 (function () {
-  const GOLD = "#B3A369";   // Georgia Tech Tech Gold
+  if (window.__favDyn) return;           // avoid double init if something re-includes head
+  window.__favDyn = true;
+
+  const GOLD = "#B3A369";                 // Georgia Tech Tech Gold
   const WHITE = "#FFFFFF";
 
-  // 8×8 pixel letters, scaled to 24×24 inside a 32×32 icon (padding keeps it crisp)
+  // 8×8 pixel letters, rendered 24×24 inside a 32×32 icon for padding (crisper look)
   const GRID = 8, SCALE = 3, SIZE = 32;
-  const LETTER = GRID * SCALE;                     // 24
-  const OFFSET = Math.floor((SIZE - LETTER) / 2);  // center letters (4px margin)
+  const LETTER = GRID * SCALE;            // 24
+  const OFFSET = ((SIZE - LETTER) / 2) | 0;
 
-  // Pixel maps ('1' = white pixel)
+  // Letter maps ('1' = white pixel)
   const A = [
     "00111100",
     "01000010",
@@ -45,79 +48,74 @@
   ];
   const FRAMES = [A, L, I];
 
-  const HOLD_MS = 5000;  // how long each letter sits
-  const SLIDE_MS = 320;  // slide duration
+  const HOLD_MS  = 5000;                  // how long each letter stays
+  const SLIDE_MS = 320;                   // slide duration
 
-  // --- ensure a single <link rel="icon"> that we control ---
-  let link = null;
-  const icons = Array.from(document.querySelectorAll('link[rel*="icon"]'));
-  if (icons.length) {
-    link = icons[0];
-    link.id = 'dynamic-favicon';
-    link.type = 'image/png';
-    // Remove any extra icon links so the browser doesn't prefer them
-    icons.slice(1).forEach(el => el.parentNode.removeChild(el));
-  } else {
-    link = document.createElement('link');
-    link.id = 'dynamic-favicon';
-    link.rel = 'icon';
-    link.type = 'image/png';
-    document.head.appendChild(link);
+  // Ensure a single <link rel="icon"> that we control — remove all others now & later
+  function ensureLink() {
+    let link = document.querySelector('link#dynamic-favicon[rel="icon"]');
+    if (!link) {
+      link = document.createElement('link');
+      link.id = 'dynamic-favicon';
+      link.rel = 'icon';
+      link.type = 'image/png';
+      document.head.appendChild(link);
+    }
+    document.querySelectorAll('link[rel*="icon"]:not(#dynamic-favicon)').forEach(n => n.remove());
+    return link;
   }
+  const link = ensureLink();
 
-  // --- canvas setup ---
-  const canvas = document.createElement('canvas');
-  canvas.width = SIZE; canvas.height = SIZE;
-  const ctx = canvas.getContext('2d', { alpha: true });
-  ctx.imageSmoothingEnabled = false; // crisp pixels
+  // If something adds icons later (rare, but can happen on some pages), remove them
+  new MutationObserver(() => ensureLink()).observe(document.head, { childList: true });
 
-  function drawMap(map, yOffset) {
+  // Canvas render
+  const c = document.createElement('canvas'); c.width = SIZE; c.height = SIZE;
+  const ctx = c.getContext('2d', { alpha: true }); ctx.imageSmoothingEnabled = false;
+
+  function draw(map, yOffset) {
     ctx.fillStyle = WHITE;
     for (let y = 0; y < GRID; y++) {
       const row = map[y];
-      for (let x = 0; x < GRID; x++) {
-        if (row[x] === '1') {
-          ctx.fillRect(OFFSET + x * SCALE, OFFSET + y * SCALE + yOffset, SCALE, SCALE);
-        }
+      for (let x = 0; x < GRID; x++) if (row[x] === '1') {
+        ctx.fillRect(OFFSET + x * SCALE, OFFSET + y * SCALE + yOffset, SCALE, SCALE);
       }
     }
   }
 
-  function renderSlide(fromIdx, toIdx, t) {
-    // Background gold
+  function renderSlide(fromMap, toMap, t) {
+    // Solid gold background each frame
     ctx.clearRect(0, 0, SIZE, SIZE);
     ctx.fillStyle = GOLD;
     ctx.fillRect(0, 0, SIZE, SIZE);
 
-    // Slide distance: slightly more than the letter height so the old letter exits fully
-    const DIST = LETTER + 4;  // 28px
-    const oldY = Math.round(DIST * t);           // move down
-    const newY = Math.round(oldY - DIST);        // start above, slide in
+    // Slide down the old letter fully off; new letter slides in from top
+    const DIST = LETTER + 6;              // a bit more than letter height
+    const oldY = Math.round(DIST * t);
+    const newY = oldY - DIST;
 
-    drawMap(FRAMES[fromIdx], oldY);
-    drawMap(FRAMES[toIdx], newY);
+    draw(fromMap, oldY);
+    draw(toMap, newY);
 
-    link.href = canvas.toDataURL('image/png');   // update favicon
+    link.href = c.toDataURL('image/png'); // dataURL busts cache
   }
 
-  // initial render
-  let i = 0;
-  renderSlide(0, 1, 0);
+  // Initial render + loop
+  let idx = 0;
+  renderSlide(FRAMES[0], FRAMES[1], 0);
 
   function cycle() {
-    const from = i;
-    const to = (i + 1) % FRAMES.length;
+    const from = FRAMES[idx];
+    const to   = FRAMES[(idx + 1) % FRAMES.length];
     const start = performance.now();
-
     function step(now) {
       const t = Math.min(1, (now - start) / SLIDE_MS);
       renderSlide(from, to, t);
       if (t < 1) requestAnimationFrame(step);
-      else { i = to; setTimeout(cycle, HOLD_MS); }
+      else { idx = (idx + 1) % FRAMES.length; setTimeout(cycle, HOLD_MS); }
     }
     requestAnimationFrame(step);
   }
-
   setTimeout(cycle, HOLD_MS);
 })();
 </script>
