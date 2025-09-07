@@ -54,7 +54,7 @@ I followed *Django 5 for the Impatient* and Django’s **Model–View–Template
 
 ### Challenges & Notes
 - **What was tricky:** There were many moments where my site looked drastically different from the book's example. This was often due to broken HTML lines in the code, etc.
-- **How I solved it:** Reviewing the code carefully before copying it over to my IDE.
+- **How I solved it:** Reviewing the code carefully before deploying, and making use of Git Version Control.
 - **If I had more time:** I would love to expand on the site by integrating data from the IMDb API.
 
 ---
