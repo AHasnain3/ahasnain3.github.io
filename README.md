@@ -45,7 +45,7 @@ I report directly to
   <span class="hc-pop" role="tooltip" aria-label="Photo of Chuck Thorpe">
     <img src="/images/mentors/chuck.jpg" alt="Chuck Thorpe headshot">
     <span class="hc-name">Chuck Thorpe</span>
-    <span class="hc-title">Mentor · Robotics</span>
+    <span class="hc-title">Professor · Robotics · Clarkson University</span>
   </span>
 </a>
 a pioneer in robotics, who serves as my mentor on this research.
@@ -61,7 +61,7 @@ reporting directly to
   <span class="hc-pop" role="tooltip" aria-label="Photo of Rick Thomas">
     <img src="/images/mentors/rick.jpg" alt="Rick Thomas headshot">
     <span class="hc-name">Rick Thomas</span>
-    <span class="hc-title">PI · Decision Processes Lab</span>
+    <span class="hc-title">PI · Decision Processes Lab · Georgia Tech</span>
   </span>
 </a>
 I contribute to the <strong>HyGENE</strong> model of hypothesis generation: turning cognitive theory into working code and experiments. My work includes implementing model components, running simulation/parameter sweeps, evaluating fit to human data, and building clean analysis/visualization pipelines to make the model easier to test and extend.
