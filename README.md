@@ -1,5 +1,5 @@
 # Ali Hasnain
-**Software Engineer | AI + Robotics | Georgia Tech 🐝 | - [Email](shasnain9@gatech.edu)**
+**Software Engineer | AI + Robotics | Georgia Tech 🐝 | [Email](shasnain9@gatech.edu)**
 
 <img src="me.jpg" alt="Ali Hasnain" width="200"/>
 
