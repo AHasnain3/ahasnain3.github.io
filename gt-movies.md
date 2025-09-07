@@ -11,7 +11,7 @@ It enables users to browse, search, and manage movies, addressing user stories l
 
 ---
 
-## 🛠Process Description
+## Process Description
 I followed Django’s **Model–Template–View (MTV)** approach:  
 - Defined models for `Movie` (title, genre, year).  
 - Built views and templates for browsing and managing movies.  
@@ -20,5 +20,5 @@ I followed Django’s **Model–Template–View (MTV)** approach:
 
 ---
 
-## 🎥 Demo Video
+## Demo Video
 [Watch the demo here](YOUR_VIDEO_LINK)
