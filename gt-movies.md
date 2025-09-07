@@ -1,5 +1,5 @@
 ---
-title: "GT Movies Store"
+title: "[← Home](/) GT Movies Store"
 ---
 
 <!-- Hide the theme's site-wide banner on THIS page only -->
