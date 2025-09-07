@@ -60,7 +60,7 @@ I followed *Django 5 for the Impatient* and Django’s **Model–View–Template
 ---
 
 ## Video Demonstration
-**[Watch the demo](YOUR_VIDEO_LINK)**
+👉 🎬 **[Watch the demo](https://youtu.be/ocTHmeA8y00)**
 
 ## Tech Stack
 Django 5 • Python • Bootstrap • Django Admin
