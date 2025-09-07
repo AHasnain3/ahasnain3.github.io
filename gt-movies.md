@@ -53,9 +53,9 @@ I followed *Django 5 for the Impatient* and Django’s **Model–View–Template
 - Kept the UI simple and responsive with Bootstrap.
 
 ### Challenges & Notes
-- **What was tricky:** `There were many moments where my site looked drastically different from the book's example. This was often due to broken HTML lines in the code, etc.`
-- **How I solved it:** `Reviewing the code carefully before copying it over to my IDE.`
-- **If I had more time:** `I would love to expand on the site by integrating data from the IMDb API.`
+- **What was tricky:** There were many moments where my site looked drastically different from the book's example. This was often due to broken HTML lines in the code, etc.
+- **How I solved it:** Reviewing the code carefully before copying it over to my IDE.
+- **If I had more time:** I would love to expand on the site by integrating data from the IMDb API.
 
 ---
 
