@@ -40,6 +40,7 @@ I report directly to [**Chuck Thorpe**](https://www.clarkson.edu/people/chuck-th
 **Decision Processes Lab at Georgia Tech:**  
 
 At Georgia Tech, I conduct research in the Decision Processes Lab, reporting directly to [**Rick Thomas**](https://psychology.gatech.edu/people/rick-thomas), the lab PI. I contribute to the **HyGENE** model of hypothesis generation—turning cognitive theory into working code and experiments. My work includes implementing model components, running simulation/parameter sweeps, evaluating fit to human data, and building clean analysis/visualization pipelines to make the model easier to test and extend.
+
 ---
 
 ## Projects
