@@ -21,15 +21,15 @@
 
 ## Research
 
-**JetAuto Autonomous Navigation (with Chuck Thorpe)**  
-Using **neural networks, ROS, and OpenCV**, we developed methods to enable a JetAuto robot to navigate autonomously.  
-This research was conducted under the supervision of [**Chuck Thorpe**](https://www.clarkson.edu/people/chuck-thorpe), a pioneer in robotics.  
-Our work focused on perception, control, and vision pipelines for robust real-world navigation.  
+**JetAuto Autonomous Navigation**  
+As a Visiting Researcher at Clarkson University, I lead a project team of undergraduate and master’s students developing methods for autonomous navigation on the JetAuto robot.  
+Using **neural networks, ROS, and OpenCV**, we have built perception, control, and vision pipelines that enable the robot to navigate real-world environments autonomously.  
+I report directly to [**Chuck Thorpe**](https://www.clarkson.edu/people/chuck-thorpe), a pioneer in robotics, who serves as my mentor on this research.  
 
 ---
 
 ## Projects
 
 - [GT Movies Store](gt-movies.md)  
-  A Django 5 web application built as part of coursework, featuring a movie catalog with search, add/edit functionality, and user authentication.
+  A Django 5 web application built as part of CS 2340 coursework, featuring a movie catalog with search, add/edit functionality, and user authentication.
 
