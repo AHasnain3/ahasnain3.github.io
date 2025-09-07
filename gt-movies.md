@@ -2,21 +2,34 @@
 title: "GT Movies Store"
 ---
 
-<!-- Hide the theme's site-wide banner on THIS page only -->
+<!-- Hide the site-wide banner on this page -->
 <style>
   .page-header, .site-header { display: none !important; }
   .main-content { padding-top: 0 !important; }
-</style>
 
-<style>
+  /* Project hero */
   .project-hero{
     background: linear-gradient(120deg,#2a7ae2,#17a2b8);
-    color:#fff; text-align:center; padding:48px 16px; border-radius:6px; margin-bottom:24px;
+    color:#fff;
+    text-align:center;
+    padding:56px 16px;
+    border-radius:6px;
+    margin:0 0 24px;
   }
+  .project-hero h1{
+    color:#fff !important;   /* override theme */
+    margin:0;
+    font-size:2.2rem;
+    font-weight:700;
+  }
+
+  /* Optional: nice spacing for back link */
+  .back { display:inline-block; margin:12px 0 24px; }
 </style>
+
 <div class="project-hero"><h1>GT Movies Store</h1></div>
 
-[← Home](/)
+<a class="back" href="/">← Home</a>
 
 ## Project Description
 GT Movies Store is a web application built with **Django 5** (based on *Django for the Impatient*).  
