@@ -29,7 +29,7 @@
 
 ## Research
 
-**JetAuto Autonomous Navigation:**
+**JetAuto Autonomous Navigation at Clarkson University:**
 
 As a Visiting Researcher at Clarkson University, I lead a project team of undergraduate and master’s students developing methods for autonomous navigation on a Jetson Nano robot.
 
