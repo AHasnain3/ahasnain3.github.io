@@ -1,4 +1,4 @@
-# GT Movies Store
+[← Home](/) # GT Movies Store
 
 ## Project Description
 GT Movies Store is a web application built with **Django 5** (based on *Django for the Impatient*).  
