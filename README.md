@@ -11,6 +11,7 @@
       <p>
         I’m a junior at <strong>Georgia Tech (’27)</strong> 🐝 working on projects at the intersection of AI, robotics, and software engineering.  
         My interests include autonomous systems, computer vision, SLAM and perception, and building software that makes an impact.
+        I'm also a founder of a [nonprofit](https://hamsa.ngo/)
       </p>
       <p>
         <a href="mailto:shasnain9@gatech.edu">Feel free to contact me if you'd like to collaborate on research.</a>
