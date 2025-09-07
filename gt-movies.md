@@ -62,5 +62,26 @@ I followed *Django 5 for the Impatient* and Django’s **Model–View–Template
 ## Video Demonstration
 👉 🎬 **[Watch the demo](https://youtu.be/ocTHmeA8y00)**
 
+<!-- Responsive YouTube embed -->
+<div class="yt-container">
+  <iframe
+    src="https://www.youtube-nocookie.com/embed/ocTHmeA8y00"
+    title="GT Movies Store demo"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen>
+  </iframe>
+</div>
+
+<style>
+  .yt-container{
+    position:relative; padding-bottom:56.25%; height:0; overflow:hidden;
+    border-radius:8px; box-shadow:0 2px 12px rgba(0,0,0,.08); margin:12px 0 24px;
+  }
+  .yt-container iframe{
+    position:absolute; top:0; left:0; width:100%; height:100%;
+  }
+</style>
+
 ## Tech Stack
 Django 5 • Python • Bootstrap • Django Admin
