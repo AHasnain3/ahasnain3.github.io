@@ -14,7 +14,7 @@
         I'm also a founder of a <a href="https://hamsa.ngo" target="_blank" rel="noopener noreferrer">nonprofit</a>.
       </p>
       <p>
-        <a href="mailto:shasnain9@gatech.edu">Feel free to contact me if you'd like to collaborate on research.</a>
+        <a href="mailto:shasnain9@gatech.edu">Feel free to contact me if you'd like to collaborate on research or nonprofit initiatives.</a>
       </p>
     </td>
 
