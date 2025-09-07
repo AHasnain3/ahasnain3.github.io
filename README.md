@@ -11,7 +11,7 @@
     <!-- Left column: Bio -->
     <td style="vertical-align:middle;border:0;">
       <p>
-        I’m a junior at <strong>Georgia Tech (’27)</strong> 🎓 working on projects at the intersection of AI, robotics, and software engineering.  
+        I’m a junior at <strong>Georgia Tech (’27)</strong> 🐝 working on projects at the intersection of AI, robotics, and software engineering.  
         My interests include autonomous systems, computer vision, SLAM and perception, and building software that makes an impact.
       </p>
       <p>
