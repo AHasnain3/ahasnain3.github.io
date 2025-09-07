@@ -13,7 +13,7 @@
         My interests include autonomous systems, computer vision, SLAM and perception, and building software that makes an impact.
       </p>
       <p>
-        <a href="mailto:shasnain9@gatech.edu">Email</a>
+        <a href="mailto:shasnain9@gatech.edu">Feel free to contact me if you'd like to collaborate on research.</a>
       </p>
     </td>
 
