@@ -7,7 +7,7 @@
       <img src="me.jpg" alt="Ali Hasnain" width="220"/>
     </td>
     <td>
-      Hi, I’m Ali — a CS undergrad at Georgia Tech building projects at the intersection of AI and robotics.<br><br>
+      Hi, I’m Ali: a CS undergrad at Georgia Tech building projects at the intersection of AI and robotics.<br><br>
       I like solving problems with code and shipping products that make an impact.
     </td>
   </tr>
