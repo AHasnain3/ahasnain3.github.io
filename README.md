@@ -26,8 +26,6 @@ Using **neural networks, ROS, and OpenCV**, we developed methods to enable a Jet
 This research was conducted under the supervision of [**Chuck Thorpe**](https://www.clarkson.edu/people/chuck-thorpe), a pioneer in robotics.  
 Our work focused on perception, control, and vision pipelines for robust real-world navigation.  
 
-![JetAuto screenshot](images/jetauto.png)
-
 ---
 
 ## Projects
