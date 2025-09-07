@@ -1,4 +1,15 @@
-[← Home](/) # GT Movies Store
+---
+title: "GT Movies Store"
+---
+
+<!-- Hide the theme's site-wide banner on THIS page only -->
+<style>
+  .page-header, .site-header { display: none !important; }
+  .main-content { padding-top: 0 !important; }
+</style>
+
+# GT Movies Store
+[← Home](/)
 
 ## Project Description
 GT Movies Store is a web application built with **Django 5** (based on *Django for the Impatient*).  
