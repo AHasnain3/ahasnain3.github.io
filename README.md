@@ -38,12 +38,31 @@ As a Visiting Researcher at Clarkson University, I lead a project team of underg
 
 Using **neural networks, ROS, and OpenCV**, we are building perception, control, and vision pipelines that enable the robot to navigate environments autonomously.  
 
-I report directly to [**Chuck Thorpe**](https://www.clarkson.edu/people/chuck-thorpe), a pioneer in robotics, who serves as my mentor on this research.  
-
+I report directly to
+<a class="hover-card" href="https://www.clarkson.edu/people/chuck-thorpe" target="_blank" rel="noopener noreferrer">
+  <span class="hc-trigger"><strong>Chuck Thorpe</strong></span>
+  <span class="hc-pop" role="tooltip" aria-label="Photo of Chuck Thorpe">
+    <img src="/images/mentors/chuck.jpg" alt="Chuck Thorpe headshot">
+    <div class="hc-name">Chuck Thorpe</div>
+    <div class="hc-title">Mentor · Robotics</div>
+  </span>
+</a>,
+a pioneer in robotics, who serves as my mentor on this research.
 
 **Decision Processes Lab at Georgia Tech:**  
 
-At Georgia Tech, I conduct research in the [**Decision Processes Lab**](https://dpl.gatech.edu/), reporting directly to [**Rick Thomas**](https://psychology.gatech.edu/people/rick-thomas), the lab PI. I contribute to the **HyGENE** model of hypothesis generation: turning cognitive theory into working code and experiments. My work includes implementing model components, running simulation/parameter sweeps, evaluating fit to human data, and building clean analysis/visualization pipelines to make the model easier to test and extend.
+At Georgia Tech, I conduct research in the
+<a href="https://dpl.gatech.edu/" target="_blank" rel="noopener noreferrer"><strong>Decision Processes Lab</strong></a>,
+reporting directly to
+<a class="hover-card" href="https://psychology.gatech.edu/people/rick-thomas" target="_blank" rel="noopener noreferrer">
+  <span class="hc-trigger"><strong>Rick Thomas</strong></span>
+  <span class="hc-pop" role="tooltip" aria-label="Photo of Rick Thomas">
+    <img src="/images/mentors/rick.jpg" alt="Rick Thomas headshot">
+    <div class="hc-name">Rick Thomas</div>
+    <div class="hc-title">PI · Decision Processes Lab</div>
+  </span>
+</a>.
+I contribute to the <strong>HyGENE</strong> model of hypothesis generation: turning cognitive theory into working code and experiments. My work includes implementing model components, running simulation/parameter sweeps, evaluating fit to human data, and building clean analysis/visualization pipelines to make the model easier to test and extend.
 
 ---
 
@@ -52,3 +71,26 @@ At Georgia Tech, I conduct research in the [**Decision Processes Lab**](https://
 - [**GT Movies Store**](gt-movies.md)  
   A Django 5 web application built as part of CS 2340 coursework, featuring a movie catalog with search, add/edit functionality, and user authentication.
 
+<style>
+  .hover-card{ position:relative; display:inline-block; }
+  .hover-card .hc-trigger{ text-decoration:underline; text-underline-offset:2px; }
+  .hover-card .hc-pop{
+    position:absolute; left:50%; bottom:1.6em; transform:translate(-50%, 6px) scale(.96);
+    opacity:0; pointer-events:none; z-index:5;
+    background:#fff; border:1px solid #e5e7eb; border-radius:12px;
+    box-shadow:0 8px 24px rgba(0,0,0,.18); padding:8px; width:180px;
+    transition:opacity .18s ease, transform .18s ease;
+  }
+  .hover-card .hc-pop img{ display:block; width:100%; height:auto; border-radius:8px; }
+  .hover-card .hc-pop .hc-name{ font:600 14px/1.2 system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial; margin-top:6px; }
+  .hover-card .hc-pop .hc-title{ color:#6b7280; font:12px/1.2 system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial; }
+  .hover-card .hc-pop::after{
+    content:""; position:absolute; top:100%; left:50%; transform:translateX(-50%);
+    border-width:6px 6px 0 6px; border-style:solid;
+    border-color:#fff transparent transparent transparent;
+    filter: drop-shadow(0 2px 2px rgba(0,0,0,.06));
+  }
+  .hover-card:hover .hc-pop,
+  .hover-card:focus-within .hc-pop{ opacity:1; transform:translate(-50%, 0) scale(1); }
+  @media (prefers-reduced-motion: reduce){ .hover-card .hc-pop{ transition:none; } }
+</style>
