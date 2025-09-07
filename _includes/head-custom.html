@@ -1,17 +1,18 @@
-<!-- Fallback static icon -->
-<link rel="icon" href="/favicon.ico">
+<!-- Fallback (shown if JS is disabled or fails) -->
+<link rel="icon" href="/favicon.ico" sizes="any">
 
-<!-- Dynamic pixel-art favicon: GT gold background, white A → L → I -->
+<!-- Dynamic pixel-art favicon: Tech Gold background, white A → L → I, slide-down transition -->
 <script>
 (function () {
-  // Colors
-  const GOLD = "#B3A369";   // Georgia Tech "Tech Gold"
+  const GOLD = "#B3A369";   // Georgia Tech Tech Gold
   const WHITE = "#FFFFFF";
 
-  // Pixel grid + output size (8x8 pixels scaled to 32x32)
-  const GRID = 8, SCALE = 4, SIZE = GRID * SCALE;
+  // 8×8 pixel letters, scaled to 24×24 inside a 32×32 icon (padding keeps it crisp)
+  const GRID = 8, SCALE = 3, SIZE = 32;
+  const LETTER = GRID * SCALE;                     // 24
+  const OFFSET = Math.floor((SIZE - LETTER) / 2);  // center letters (4px margin)
 
-  // Define pixel maps (8x8) for A, L, I. '1' = white pixel, '0' = empty.
+  // Pixel maps ('1' = white pixel)
   const A = [
     "00111100",
     "01000010",
@@ -42,14 +43,21 @@
     "11111111",
     "00000000"
   ];
+  const FRAMES = [A, L, I];
 
-  const FRAMES = [A, L, I];             // cycle order
-  const HOLD_MS = 5000;                  // time each letter stays
-  const FADE_MS = 400;                   // crossfade duration
+  const HOLD_MS = 5000;  // how long each letter sits
+  const SLIDE_MS = 320;  // slide duration
 
-  // Ensure a <link rel="icon"> we can update
-  let link = document.querySelector('link#dynamic-favicon[rel="icon"]');
-  if (!link) {
+  // --- ensure a single <link rel="icon"> that we control ---
+  let link = null;
+  const icons = Array.from(document.querySelectorAll('link[rel*="icon"]'));
+  if (icons.length) {
+    link = icons[0];
+    link.id = 'dynamic-favicon';
+    link.type = 'image/png';
+    // Remove any extra icon links so the browser doesn't prefer them
+    icons.slice(1).forEach(el => el.parentNode.removeChild(el));
+  } else {
     link = document.createElement('link');
     link.id = 'dynamic-favicon';
     link.rel = 'icon';
@@ -57,41 +65,44 @@
     document.head.appendChild(link);
   }
 
-  // Drawing surface
+  // --- canvas setup ---
   const canvas = document.createElement('canvas');
   canvas.width = SIZE; canvas.height = SIZE;
-  const ctx = canvas.getContext('2d');
+  const ctx = canvas.getContext('2d', { alpha: true });
+  ctx.imageSmoothingEnabled = false; // crisp pixels
 
-  function drawMap(map, alpha) {
-    ctx.globalAlpha = alpha;
+  function drawMap(map, yOffset) {
     ctx.fillStyle = WHITE;
     for (let y = 0; y < GRID; y++) {
       const row = map[y];
       for (let x = 0; x < GRID; x++) {
         if (row[x] === '1') {
-          ctx.fillRect(x * SCALE, y * SCALE, SCALE, SCALE);
+          ctx.fillRect(OFFSET + x * SCALE, OFFSET + y * SCALE + yOffset, SCALE, SCALE);
         }
       }
     }
-    ctx.globalAlpha = 1;
   }
 
-  function render(fromIdx, toIdx, t) {
-    // Background gold square
-    ctx.imageSmoothingEnabled = false;
+  function renderSlide(fromIdx, toIdx, t) {
+    // Background gold
+    ctx.clearRect(0, 0, SIZE, SIZE);
     ctx.fillStyle = GOLD;
     ctx.fillRect(0, 0, SIZE, SIZE);
 
-    // Crossfade letters: from (1-t) → to (t)
-    drawMap(FRAMES[fromIdx], 1 - t);
-    drawMap(FRAMES[toIdx], t);
+    // Slide distance: slightly more than the letter height so the old letter exits fully
+    const DIST = LETTER + 4;  // 28px
+    const oldY = Math.round(DIST * t);           // move down
+    const newY = Math.round(oldY - DIST);        // start above, slide in
 
-    // Update favicon (data URL busts cache)
-    link.href = canvas.toDataURL('image/png');
+    drawMap(FRAMES[fromIdx], oldY);
+    drawMap(FRAMES[toIdx], newY);
+
+    link.href = canvas.toDataURL('image/png');   // update favicon
   }
 
+  // initial render
   let i = 0;
-  render(0, 1, 0);  // initial frame
+  renderSlide(0, 1, 0);
 
   function cycle() {
     const from = i;
@@ -99,14 +110,14 @@
     const start = performance.now();
 
     function step(now) {
-      const t = Math.min(1, (now - start) / FADE_MS);
-      render(from, to, t);
+      const t = Math.min(1, (now - start) / SLIDE_MS);
+      renderSlide(from, to, t);
       if (t < 1) requestAnimationFrame(step);
       else { i = to; setTimeout(cycle, HOLD_MS); }
     }
     requestAnimationFrame(step);
   }
 
-  setTimeout(cycle, HOLD_MS); // wait, then animate
+  setTimeout(cycle, HOLD_MS);
 })();
 </script>
