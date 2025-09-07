@@ -1,14 +1,14 @@
 # Ali Hasnain
-**Software Engineer | AI + Robotics | Georgia Tech**
+**Software Engineer | AI + Robotics | Georgia Tech 🐝**
 
-Hi, I’m Ali — a CS undergrad at Georgia Tech building projects at the intersection of AI and robotics.  
+Hi, I’m Ali - a CS undergrad at Georgia Tech building projects at the intersection of AI and robotics.  
 I like solving problems with code and shipping products that make an impact.
 
 ---
 
 ## 🚀 Projects
-- **MedTour Platform** — Next.js + MongoDB app connecting US patients with providers abroad. [GitHub](#) | [Demo](#)
-- **JetAuto Maze Nav** — Jetson Nano robot with OpenCV + ROS for autonomous maze navigation. [Video](#)
+- **MedTour Platform** — Next.js + MongoDB app connecting US patients with providers abroad.
+- **JetAuto Maze Nav** — Jetson Nano robot with OpenCV + ROS for autonomous maze navigation.
 
 ---
 
