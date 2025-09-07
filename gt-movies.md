@@ -1,5 +1,5 @@
 ---
-title: "[← Home](/) GT Movies Store"
+title: "GT Movies Store"
 ---
 
 <!-- Hide the theme's site-wide banner on THIS page only -->
@@ -8,7 +8,14 @@ title: "[← Home](/) GT Movies Store"
   .main-content { padding-top: 0 !important; }
 </style>
 
-# GT Movies Store
+<style>
+  .project-hero{
+    background: linear-gradient(120deg,#2a7ae2,#17a2b8);
+    color:#fff; text-align:center; padding:48px 16px; border-radius:6px; margin-bottom:24px;
+  }
+</style>
+<div class="project-hero"><h1>GT Movies Store</h1></div>
+
 [← Home](/)
 
 ## Project Description
