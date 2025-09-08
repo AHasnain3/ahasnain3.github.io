@@ -41,7 +41,7 @@ Using **neural networks, ROS, and OpenCV**, we are building perception, control,
 I report directly to
 <!-- Chuck Thorpe -->
 <a class="hover-card" href="https://www.clarkson.edu/people/chuck-thorpe" target="_blank" rel="noopener noreferrer">
-  <span class="hc-trigger"><strong>Chuck Thorpe</strong></span>
+  <span class="hc-trigger"><strong>Chuck Thorpe,</strong></span>
   <span class="hc-pop" role="tooltip" aria-label="Photo of Chuck Thorpe">
     <img src="/images/mentors/chuck.jpg" alt="Chuck Thorpe headshot">
     <span class="hc-name">Chuck Thorpe</span>
