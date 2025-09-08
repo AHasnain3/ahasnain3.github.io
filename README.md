@@ -64,7 +64,7 @@ reporting directly to
     <span class="hc-title">PI · Decision Processes Lab · Georgia Tech</span>
   </span>
 </a>
-I contribute to the <strong>HyGENE</strong> model of hypothesis generation: turning cognitive theory into working code and experiments. My work includes implementing model components, running simulation/parameter sweeps, evaluating fit to human data, and building clean analysis/visualization pipelines to make the model easier to test and extend.
+. I contribute to the <strong>HyGENE</strong> model of hypothesis generation: turning cognitive theory into working code and experiments. My work includes implementing model components, running simulation/parameter sweeps, evaluating fit to human data, and building clean analysis/visualization pipelines to make the model easier to test and extend.
 
 ---
 
