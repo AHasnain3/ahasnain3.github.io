@@ -57,10 +57,10 @@ At Georgia Tech, I conduct research in the
 reporting directly to
 <!-- Rick Thomas -->
 <a class="hover-card" href="https://psychology.gatech.edu/people/rick-thomas" target="_blank" rel="noopener noreferrer">
-  <span class="hc-trigger"><strong>Rick Thomas</strong></span>
+  <span class="hc-trigger"><strong>Rick Thomas.</strong></span>
   <span class="hc-pop" role="tooltip" aria-label="Photo of Rick Thomas">
     <img src="/images/mentors/rick.jpg" alt="Rick Thomas headshot">
-    <span class="hc-name">Rick Thomas.</span>
+    <span class="hc-name">Rick Thomas</span>
     <span class="hc-title">PI · Decision Processes Lab · Georgia Tech</span>
   </span>
 </a>
